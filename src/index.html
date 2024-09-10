@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carson Kyba Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        .poppins-thin {
+            font-family: "Poppins", sans-serif;
+            font-weight: 100;
+            font-style: normal;
+        }
+
+        .poppins-extralight {
+            font-family: "Poppins", sans-serif;
+            font-weight: 200;
+            font-style: normal;
+        }
+
+        .poppins-light {
+            font-family: "Poppins", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        .poppins-regular {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        .poppins-medium {
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        .poppins-semibold {
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            font-style: normal;
+        }
+
+        .poppins-bold {
+            font-family: "Poppins", sans-serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .poppins-extrabold {
+            font-family: "Poppins", sans-serif;
+            font-weight: 800;
+            font-style: normal;
+        }
+
+        .poppins-black {
+            font-family: "Poppins", sans-serif;
+            font-weight: 900;
+            font-style: normal;
+        }
+
+        .poppins-thin-italic {
+            font-family: "Poppins", sans-serif;
+            font-weight: 100;
+            font-style: italic;
+        }
+
+        .poppins-extralight-italic {
+            font-family: "Poppins", sans-serif;
+            font-weight: 200;
+            font-style: italic;
+        }
+
+        .poppins-light-italic {
+            font-family: "Poppins", sans-serif;
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        .poppins-regular-italic {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        .poppins-medium-italic {
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            font-style: italic;
+        }
+
+        .poppins-semibold-italic {
+            font-family: "Poppins", sans-serif;
+            font-weight: 600;
+            font-style: italic;
+        }
+
+        .poppins-bold-italic {
+            font-family: "Poppins", sans-serif;
+            font-weight: 700;
+            font-style: italic;
+        }
+
+        .poppins-extrabold-italic {
+            font-family: "Poppins", sans-serif;
+            font-weight: 800;
+            font-style: italic;
+        }
+
+        .poppins-black-italic {
+            font-family: "Poppins", sans-serif;
+            font-weight: 900;
+            font-style: italic;
+        }
+
+
+        .bg-text-container {
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .bg-text {
+            position: absolute;
+            right: 0.1em;
+            bottom: 1.6em;
+            font-size: 10vw;
+            line-height: 0.9;
+            color: black;
+            transform: rotateX(-20deg) rotateY(-30deg) scaleX(100%);
+            transform-origin: bottom right;
+            transform-style: preserve-3d;
+            white-space: nowrap;
+        }
+
+        .bg-text2 {
+            position: absolute;
+            right: 0.1em;
+            bottom: 0em;
+            font-size: 10vw;
+            line-height: 0.9;
+            color: #fcba03;
+            transform: rotateX(-20deg) rotateY(-30deg) scaleX(100%);
+            transform-origin: bottom right;
+            transform-style: preserve-3d;
+            -webkit-text-stroke-width: 5px;
+            -webkit-text-stroke-color: black;
+
+            white-space: nowrap;
+        }
+
+
+        @media (max-width: 640px) {
+            .bg-text {
+                font-size: 15vw;
+            }
+
+            .bg-text2 {
+                font-size: 15vw;
+            }
+        }
+
+        img {
+            filter: invert(100%);
+        }
+
+        a:hover {
+            color: rgb(228, 228, 228);
+        }
+    </style>
+</head>
+
+<body class="bg-[#fcba03] min-h-screen poppins-medium">
+    <div class="relative">
+        <!-- background 3D text -->
+        <div class="bg-text-container">
+            <h1 class="bg-text poppins-extrabold mb-6">
+                Carson<br>Kyba
+            </h1>
+            <h1 class="bg-text2 text-right poppins-extrabold">
+                Computer<br>Science
+            </h1>
+        </div>
+
+        <!-- foreground content -->
+        <div class="container text-white left-0 px-4 py-4 flex-col poppins-semibold text-xl">
+            <h1 class="mb-6">I'm a fourth-year CS student at the University of British
+                Columbia, Vancouver. </h1>
+            <h1 class="text-lg mb-6">I'm focused on full-stack software engineering and databases.</h1>
+            <!-- 
+            
+            
+            PROJECTS
+            
+            
+            -->
+            <h1 class=" mb-2 clear-both">Check out my personal projects here: </h1>
+
+            <a href="https://github.com/CarsonKiibi" target="_blank" class="flex flex-row mb-2">
+                <img src="assets/GitHub-256.png" width="32" class="ml-4 mr-2">
+                <p class="text-sm my-auto">my github profile</p>
+            </a>
+
+            <a href="https://github.com/CarsonKiibi/PDFAPP" target="_blank" class="flex flex-row mb-2">
+                <img src="assets/Golang-256.png" width="32" class="ml-4 mr-2">
+                <p class="text-sm my-auto">work in progress (currently lexing) - custom language to pdf webapp</p>
+            </a>
+
+            <a href="https://github.com/CarsonKiibi/Census-data-project" target="_blank" class="flex flex-row mb-2">
+                <img src="assets/Laravel-256.png" width="32" class="ml-4 mr-2">
+                <p class="text-sm my-auto">group census data project with SQLite, raw SQL</p>
+            </a>
+
+            <a href="https://github.com/CarsonKiibi/car-listing-app" target="_blank" class="flex flex-row mb-2">
+                <img src="assets/Java-256.png" width="32" class="ml-4 mr-2">
+                <p class="text-sm my-auto">app to simulate car listings</p>
+            </a>
+
+            <a href="https://github.com/CarsonKiibi/search-graphs" target="_blank" class="flex flex-row mb-8">
+                <img src="assets/Python-256.png" width="32" class="ml-4 mr-2">
+                <p class="text-sm my-auto">simple python app to visualize dijkstra's algorithm</p>
+            </a>
+
+            <!-- 
+            
+            
+            REACH OUT
+            
+            
+            -->
+
+            <h1 class="mb-2">Reach out:</h1>
+
+            <a href="https://www.linkedin.com/in/ckyba/" target="_blank" class="flex flex-row mb-2">
+                <img src="assets/LinkedIn-256.png" width="32" class="ml-4 mr-2">
+                <p class="text-sm my-auto">connect/message me</p>
+            </a>
+
+            <a href="https://x.com/kii1bs" target="_blank" class="flex flex-row mb-2">
+                <img src="assets/Twitter-256.png" width="32" class="ml-4 mr-2">
+                <p class="text-sm my-auto">personal project updates sometimes</p>
+            </a>
+
+            <a href="https://www.instagram.com/carson_ky/" target="_blank" class="flex flex-row mb-8">
+                <img src="assets/Instagram-256.png" width="32" class="ml-4 mr-2">
+                <p class="text-sm my-auto">personal, feel free to dm</p>
+            </a>
+
+            <!-- 
+            
+            
+            COURSE WORK
+            
+            
+            -->
+            <h1 class="mb-2">My current course work (Sept-Dec 2024):</h1>
+
+            <div class="flex flex-row mb-2">
+                <img src="assets/TypeScript-256.png" width="32" class="ml-4 mr-2">
+                <p class="text-sm my-auto">CPSC 310 - Introduction to Software Engineering</p>
+            </div>
+
+            <div class="flex flex-row mb-2">
+                <img src="assets/C-Letter-256.png" width="32" class="ml-4 mr-2">
+                <p class="text-sm my-auto">CPSC 313 - Computer Hardware and Operating Systems</p>
+            </div>
+
+            <div class="flex flex-row mb-2">
+                <img src="assets/Internet-256.png" width="32" class="ml-4 mr-2">
+                <p class="text-sm my-auto">CPSC 317 - Internet Computing</p>
+            </div>
+
+            <div class="flex flex-row mb-2">
+                <img src="assets/Settings-User-256.png" width="32" class="ml-4 mr-2">
+                <p class="text-sm my-auto">CPSC 330 - Applied Machine Learning</p>
+            </div>
+
+            <div class="flex flex-row mb-8">
+                <img src="assets/SQl-256.png" width="32" class="ml-4 mr-2">
+                <p class="text-sm my-auto">CPSC 404 - Advanced Relational Databases</p>
+            </div>
+
+            <!-- 
+            
+            
+            CLUB/EXTRACURRUICULAR
+            
+            
+            -->
+            <h1 class="mb-2">Club/Extracurricular:</h1>
+
+            <div class="flex flex-row mb-2">
+                <img src="assets/React-256.png" width="32" class="ml-4 mr-2">
+                <p class="text-sm my-auto">UBC BIOMOD Website Team Member - &nbsp;</p>
+                <a href="https://ubcbiomod.com/" target="_blank" class="text-sm my-auto">
+                    <p class="text-sm">Website</p>
+                </a>
+            </div>
+
+            <div class="flex flex-row mb-2">
+                <img src="assets/Controller-256.png" width="32" class="ml-4 mr-2">
+                <p class="text-sm my-auto">UBCEA Executive</p>
+            </div>
+
+
+        </div>
+    </div>
+</body>
+
+</html>
