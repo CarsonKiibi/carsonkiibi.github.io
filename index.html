@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carson Kyba Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -134,8 +135,6 @@
 
         .bg-text {
             position: absolute;
-            right: 0.1em;
-            bottom: 1.6em;
             font-size: 10vw;
             line-height: 0.9;
             color: black;
@@ -145,10 +144,134 @@
             white-space: nowrap;
         }
 
+        .bg-text-pos1 {
+            right: 2.64em;
+            bottom: 3.29em;
+        }
+
+        .bg-text-pos2 {
+            right: 2.06em;
+            bottom: 3.17em;
+        }
+
+        .bg-text-pos3 {
+            right: 1.66em;
+            bottom: 3.09em;
+        }
+
+        .bg-text-pos4 {
+            right: 1.16em;
+            bottom: 2.97em;
+        }
+
+        .bg-text-pos5 {
+            right: 0.6em;
+            bottom: 2.85em;
+        }
+
+        .bg-text-pos6 {
+            right: 0.0em;
+            bottom: 2.72em;
+        }
+
+        .bg-text-pos1-1 {
+            right: 2.64em;
+            bottom: 2.42em;
+        }
+
+        .bg-text-pos1-2 {
+            right: 2.06em;
+            bottom: 2.30em;
+        }
+
+        .bg-text-pos1-3 {
+            right: 1.47em;
+            bottom: 2.17em;
+        }
+
+        .bg-text-pos1-4 {
+            right: 0.88em;
+            bottom: 2.05em;
+        }
+
+        .bg-text-pos2-1 {
+            right: 4.0em;
+            bottom: 1.70em;
+        }
+
+        .bg-text-pos2-2 {
+            right: 3.45em;
+            bottom: 1.57em;
+        }
+
+        .bg-text-pos2-3 {
+            right: 2.52em;
+            bottom: 1.38em;
+        }
+
+        .bg-text-pos2-4 {
+            right: 1.94em;
+            bottom: 1.25em;
+        }
+
+        .bg-text-pos2-5 {
+            right: 1.35em;
+            bottom: 1.12em;
+        }
+
+        .bg-text-pos2-6 {
+            right: 0.98em;
+            bottom: 1.02em;
+        }
+
+        .bg-text-pos2-7 {
+            right: 0.43em;
+            bottom: 0.88em;
+        }
+
+        .bg-text-pos2-8 {
+            right: 0.03em;
+            bottom: 0.8em;
+        }
+
+        .bg-text-pos3-1 {
+            right: 3.05em;
+            bottom: 0.7em;
+        }
+
+        .bg-text-pos3-2 {
+            right: 2.52em;
+            bottom: 0.57em;
+        }
+
+        .bg-text-pos3-3 {
+            right: 2.26em;
+            bottom: 0.51em;
+        }
+
+        .bg-text-pos3-4 {
+            right: 1.72em;
+            bottom: 0.39em;
+        }
+
+        .bg-text-pos3-5 {
+            right: 1.12em;
+            bottom: 0.28em;
+        }
+
+        .bg-text-pos3-6 {
+            right: 0.59em;
+            bottom: 0.14em;
+        }
+
+        .bg-text-pos3-7 {
+            right: 0.03em;
+            bottom: 0em;
+        }
+
+
         .bg-text2 {
             position: absolute;
-            right: 0.1em;
-            bottom: 0em;
             font-size: 10vw;
             line-height: 0.9;
             color: #fcba03;
@@ -179,19 +302,124 @@
         a:hover {
             color: rgb(228, 228, 228);
         }
+
+
+
+
+
+        .wavy span {
+
+            animation: animate 5s ease-in-out infinite;
+            animation-delay: calc(0.1s * var(--i))
+        }
+
+        @keyframes animate {
+            0% {
+                transform: translateY(0px) rotateX(-20deg) rotateY(-30deg) scaleX(100%);
+                transform-origin: bottom right;
+                transform-style: preserve-3d;
+            }
+
+            20% {
+                transform: translateY(-30px) rotateX(20deg) rotateY(30deg) scaleX(110%);
+                transform-origin: bottom left;
+                transform-style: preserve-3d;
+            }
+
+            40%,
+            100% {
+                transform: translateY(0px) rotateX(-20deg) rotateY(-30deg) scaleX(100%);
+                transform-origin: bottom right;
+                transform-style: preserve-3d;
+            }
+        }
     </style>
 </head>
 
 <body class="bg-[#fcba03] min-h-screen poppins-medium">
     <div class="relative">
         <!-- background 3D text -->
-        <div class="bg-text-container">
-            <h1 class="bg-text poppins-extrabold mb-6">
+        <div class="bg-text-container mr-2 wavy">
+            <!-- <span class="bg-text poppins-extrabold mb-6">
                 Carson<br>Kyba
-            </h1>
-            <h1 class="bg-text2 text-right poppins-extrabold">
-                Computer<br>Science
-            </h1>
+            </span> -->
+            <span class="bg-text poppins-extrabold mb-6 bg-text-pos1" style="--i:1">
+                C
+            </span>
+            <span class="bg-text poppins-extrabold mb-6 bg-text-pos2" style="--i:2">
+                a
+            </span>
+            <span class="bg-text poppins-extrabold mb-6 bg-text-pos3" style="--i:3">
+                r
+            </span>
+            <span class="bg-text poppins-extrabold mb-6 bg-text-pos4" style="--i:4">
+                s
+            </span>
+            <span class="bg-text poppins-extrabold mb-6 bg-text-pos5" style="--i:5">
+                o
+            </span>
+            <span class="bg-text poppins-extrabold mb-6 bg-text-pos6" style="--i:6">
+                n
+            </span>
+            <span class="bg-text poppins-extrabold mb-6 bg-text-pos1-1" style="--i:6">
+                K
+            </span>
+            <span class="bg-text poppins-extrabold mb-6 bg-text-pos1-2" style="--i:7">
+                y
+            </span>
+            <span class="bg-text poppins-extrabold mb-6 bg-text-pos1-3" style="--i:8">
+                b
+            </span>
+            <span class="bg-text poppins-extrabold mb-6 bg-text-pos1-4" style="--i:9">
+                a
+            </span>
+
+            <span class="bg-text2 poppins-extrabold mb-6 bg-text-pos2-1" style="--i:1">
+                C
+            </span>
+            <span class="bg-text2 poppins-extrabold mb-6 bg-text-pos2-2" style="--i:4">
+                o
+            </span>
+            <span class="bg-text2 poppins-extrabold mb-6 bg-text-pos2-3" style="--i:5">
+                m
+            </span>
+            <span class="bg-text2 poppins-extrabold mb-6 bg-text-pos2-4" style="--i:6">
+                p
+            </span>
+            <span class="bg-text2 poppins-extrabold mb-6 bg-text-pos2-5" style="--i:6">
+                u
+            </span>
+            <span class="bg-text2 poppins-extrabold mb-6 bg-text-pos2-6" style="--i:7">
+                t
+            </span>
+            <span class="bg-text2 poppins-extrabold mb-6 bg-text-pos2-7" style="--i:8">
+                e
+            </span>
+            <span class="bg-text2 poppins-extrabold mb-6 bg-text-pos2-8" style="--i:9">
+                r
+            </span>
+            <span class="bg-text2 poppins-extrabold mb-6 bg-text-pos3-1" style="--i:4">
+                S
+            </span>
+            <span class="bg-text2 poppins-extrabold mb-6 bg-text-pos3-2" style="--i:5">
+                c
+            </span>
+            <span class="bg-text2 poppins-extrabold mb-6 bg-text-pos3-3" style="--i:6">
+                i
+            </span>
+            <span class="bg-text2 poppins-extrabold mb-6 bg-text-pos3-4" style="--i:6">
+                e
+            </span>
+            <span class="bg-text2 poppins-extrabold mb-6 bg-text-pos3-5" style="--i:7">
+                n
+            </span>
+            <span class="bg-text2 poppins-extrabold mb-6 bg-text-pos3-6" style="--i:8">
+                c
+            </span>
+            <span class="bg-text2 poppins-extrabold mb-6 bg-text-pos3-7" style="--i:9">
+                e
+            </span>
+
         </div>
 
         <!-- foreground content -->
