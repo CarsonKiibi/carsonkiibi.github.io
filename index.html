@@ -12,6 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <style>
         .poppins-thin {
             font-family: "Poppins", sans-serif;
@@ -235,40 +236,39 @@
         }
 
         .bg-text-pos3-1 {
-            right: 3.05em;
+            right: 3.35em;
             bottom: 0.7em;
         }
 
         .bg-text-pos3-2 {
-            right: 2.52em;
+            right: 2.82em;
             bottom: 0.57em;
         }
 
         .bg-text-pos3-3 {
-            right: 2.26em;
+            right: 2.56em;
             bottom: 0.51em;
         }
 
         .bg-text-pos3-4 {
-            right: 1.72em;
+            right: 2.02em;
             bottom: 0.39em;
         }
 
         .bg-text-pos3-5 {
-            right: 1.12em;
+            right: 1.42em;
             bottom: 0.28em;
         }
 
         .bg-text-pos3-6 {
-            right: 0.59em;
+            right: 0.89em;
             bottom: 0.14em;
         }
 
         .bg-text-pos3-7 {
-            right: 0.03em;
+            right: 0.33em;
             bottom: 0em;
         }
-
 
         .bg-text2 {
             position: absolute;
@@ -292,6 +292,7 @@
 
             .bg-text2 {
                 font-size: 15vw;
+                -webkit-text-stroke-width: 2px;
             }
         }
 
@@ -303,12 +304,7 @@
             color: rgb(228, 228, 228);
         }
 
-
-
-
-
         .wavy span {
-
             animation: animate 5s ease-in-out infinite;
             animation-delay: calc(0.1s * var(--i))
         }
@@ -339,10 +335,7 @@
 <body class="bg-[#fcba03] min-h-screen poppins-medium">
     <div class="relative">
         <!-- background 3D text -->
-        <div class="bg-text-container mr-2 wavy">
-            <!-- <span class="bg-text poppins-extrabold mb-6">
-                Carson<br>Kyba
-            </span> -->
+        <div id="animatedDiv" class="bg-text-container mr-2 wavy">
             <span class="bg-text poppins-extrabold mb-6 bg-text-pos1" style="--i:1">
                 C
             </span>
@@ -424,8 +417,13 @@
 
         <!-- foreground content -->
         <div class="container text-white left-0 px-4 py-4 flex-col poppins-semibold text-xl">
-            <h1 class="mb-6">I'm a fourth-year CS student at the University of British
-                Columbia, Vancouver. </h1>
+            <div class="flex flex-row">
+                <h1 class="mb-6">I'm a fourth-year CS student at the University of British
+                    Columbia, Vancouver. </h1>
+                <button id="toggleButton" class="pp-button h-8 ml-2">
+                    <span id="buttonIcon" class="material-icons align-top">pause</span>
+                </button>
+            </div>
             <h1 class="text-lg mb-6">I'm focused on full-stack software engineering and databases.</h1>
             <!-- 
             
@@ -437,27 +435,30 @@
             <h1 class=" mb-2 clear-both">Check out my personal projects here: </h1>
 
             <a href="https://github.com/CarsonKiibi" target="_blank" class="flex flex-row mb-2">
-                <img src="assets/GitHub-256.png" alt="Github Logo" width="32" class="ml-4 mr-2">
+                <img src="assets/GitHub-256.png" alt="Github Logo" width="32"
+                    class="ml-4 mr-2 w-8 h-auto max-w-8 max-h-8">
                 <p class="text-sm my-auto">my github profile</p>
             </a>
 
             <a href="https://github.com/CarsonKiibi/PDFAPP" target="_blank" class="flex flex-row mb-2">
-                <img src="assets/Golang-256.png" alt="Golang Logo" width="32" class="ml-4 mr-2">
+                <img src="assets/Golang-256.png" alt="Golang Logo" class="ml-4 mr-2 w-8 h-auto max-w-8 max-h-8">
                 <p class="text-sm my-auto">work in progress (currently lexing) - custom language to pdf webapp</p>
             </a>
 
             <a href="https://github.com/CarsonKiibi/Census-data-project" target="_blank" class="flex flex-row mb-2">
-                <img src="assets/Laravel-256.png" alt="Laravel Logo" width="32" class="ml-4 mr-2">
+                <img src="assets/Laravel-256.png" alt="Laravel Logo" width="32"
+                    class="ml-4 mr-2 w-8 h-auto max-w-8 max-h-8">
                 <p class="text-sm my-auto">group census data project with SQLite, raw SQL</p>
             </a>
 
             <a href="https://github.com/CarsonKiibi/car-listing-app" target="_blank" class="flex flex-row mb-2">
-                <img src="assets/Java-256.png" alt="Java Logo" width="32" class="ml-4 mr-2">
+                <img src="assets/Java-256.png" alt="Java Logo" width="32" class="ml-4 mr-2 w-8 h-auto max-w-8 max-h-8">
                 <p class="text-sm my-auto">app to simulate car listings</p>
             </a>
 
             <a href="https://github.com/CarsonKiibi/search-graphs" target="_blank" class="flex flex-row mb-8">
-                <img src="assets/Python-256.png" alt="Python Logo" width="32" class="ml-4 mr-2">
+                <img src="assets/Python-256.png" alt="Python Logo" width="32"
+                    class="ml-4 mr-2 w-8 h-auto max-w-8 max-h-8">
                 <p class="text-sm my-auto">simple python app to visualize dijkstra's algorithm</p>
             </a>
 
@@ -472,17 +473,20 @@
             <h1 class="mb-2">Reach out:</h1>
 
             <a href="https://www.linkedin.com/in/ckyba/" target="_blank" class="flex flex-row mb-2">
-                <img src="assets/LinkedIn-256.png" alt="LinkedIn Logo" width="32" class="ml-4 mr-2">
+                <img src="assets/LinkedIn-256.png" alt="LinkedIn Logo" width="32"
+                    class="ml-4 mr-2 w-8 h-auto max-w-8 max-h-8">
                 <p class="text-sm my-auto">connect/message me</p>
             </a>
 
             <a href="https://x.com/kii1bs" target="_blank" class="flex flex-row mb-2">
-                <img src="assets/Twitter-256.png" alt="Twitter Logo" width="32" class="ml-4 mr-2">
+                <img src="assets/Twitter-256.png" alt="Twitter Logo" width="32"
+                    class="ml-4 mr-2 w-8 h-auto max-w-8 max-h-8">
                 <p class="text-sm my-auto">personal project updates sometimes</p>
             </a>
 
             <a href="https://www.instagram.com/carson_ky/" target="_blank" class="flex flex-row mb-8">
-                <img src="assets/Instagram-256.png" alt="Instagram Logo" width="32" class="ml-4 mr-2">
+                <img src="assets/Instagram-256.png" alt="Instagram Logo" width="32"
+                    class="ml-4 mr-2 w-8 h-auto max-w-8 max-h-8">
                 <p class="text-sm my-auto">personal, feel free to dm</p>
             </a>
 
@@ -496,27 +500,31 @@
             <h1 class="mb-2">My current course work (Sept-Dec 2024):</h1>
 
             <div class="flex flex-row mb-2">
-                <img src="assets/TypeScript-256.png" alt="TypeScript" width="32" class="ml-4 mr-2">
+                <img src="assets/TypeScript-256.png" alt="TypeScript" width="32"
+                    class="ml-4 mr-2 w-8 h-auto max-w-8 max-h-8">
                 <p class="text-sm my-auto">CPSC 310 - Introduction to Software Engineering</p>
             </div>
 
             <div class="flex flex-row mb-2">
-                <img src="assets/C-Letter-256.png" alt="C Language" width="32" class="ml-4 mr-2">
+                <img src="assets/C-Letter-256.png" alt="C Language" width="32"
+                    class="ml-4 mr-2 w-8 h-auto max-w-8 max-h-8">
                 <p class="text-sm my-auto">CPSC 313 - Computer Hardware and Operating Systems</p>
             </div>
 
             <div class="flex flex-row mb-2">
-                <img src="assets/Internet-256.png" alt="Internet" width="32" class="ml-4 mr-2">
+                <img src="assets/Internet-256.png" alt="Internet" width="32"
+                    class="ml-4 mr-2 w-8 h-auto max-w-8 max-h-8">
                 <p class="text-sm my-auto">CPSC 317 - Internet Computing</p>
             </div>
 
             <div class="flex flex-row mb-2">
-                <img src="assets/Settings-User-256.png" alt="Machine Learning" width="32" class="ml-4 mr-2">
+                <img src="assets/Settings-User-256.png" alt="Machine Learning" width="32"
+                    class="ml-4 mr-2 w-8 h-auto max-w-8 max-h-8">
                 <p class="text-sm my-auto">CPSC 330 - Applied Machine Learning</p>
             </div>
 
             <div class="flex flex-row mb-8">
-                <img src="assets/SQL-256.png" alt="SQL" width="32" class="ml-4 mr-2">
+                <img src="assets/SQL-256.png" alt="SQL" width="32" class="ml-4 mr-2 w-8 h-auto max-w-8 max-h-8">
                 <p class="text-sm my-auto">CPSC 404 - Advanced Relational Databases</p>
             </div>
 
@@ -530,21 +538,38 @@
             <h1 class="mb-2">Club/Extracurricular:</h1>
 
             <div class="flex flex-row mb-2">
-                <img src="assets/React-256.png" width="32" class="ml-4 mr-2">
-                <p class="text-sm my-auto">UBC BIOMOD Website Team Member - &nbsp;</p>
-                <a href="https://ubcbiomod.com/" target="_blank" class="text-sm my-auto">
-                    <p class="text-sm">Website</p>
-                </a>
+                <img src="assets/React-256.png" width="32" class="ml-4 mr-2 w-8 h-auto max-w-8 max-h-8">
+                <div class="flex items-center">
+                    <p class="text-sm my-auto whitespace-nowrap">UBC BIOMOD Website Team Member&nbsp;</p>
+                    <a href="https://ubcbiomod.com/" target="_blank" class="text-sm my-auto whitespace-nowrap">
+                        - Website
+                    </a>
+                </div>
             </div>
 
             <div class="flex flex-row mb-2">
-                <img src="assets/Controller-256.png" width="32" class="ml-4 mr-2">
+                <img src="assets/Controller-256.png" width="32" class="ml-4 mr-2 w-8 h-auto max-w-8 max-h-8">
                 <p class="text-sm my-auto">UBCEA Executive</p>
             </div>
 
 
         </div>
     </div>
+
+    <script>
+        document.getElementById('toggleButton').addEventListener('click', function () {
+            var animatedDiv = document.getElementById('animatedDiv');
+            var buttonIcon = document.getElementById('buttonIcon');
+
+            if (animatedDiv.classList.contains('wavy')) {
+                animatedDiv.classList.remove('wavy');
+                buttonIcon.textContent = 'play_arrow'; // Change to play icon
+            } else {
+                animatedDiv.classList.add('wavy');
+                buttonIcon.textContent = 'pause'; // Change to pause icon
+            }
+        });
+    </script>
 </body>
 
 </html>
